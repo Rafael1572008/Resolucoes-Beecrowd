@@ -1,0 +1,34 @@
+Quetão 1030, nível 2 | A Lenda de Flavious Josephus (Não finalizado)
+========================================================
+def prog(Prohibited):
+    mans = []
+    
+    lst = Prohibited.split()
+
+    nm = int(lst[0])
+    
+    if len(lst) >= 2:
+        h = int(lst[1])
+    else:
+        h = 1
+    
+    for i in range(1, nm + 1):
+        mans.append(i)
+    
+    i = 0    
+    while (len(mans) != 1):
+        i = (i + h - 1) % len(mans)
+        
+        del mans[i]
+        
+    return mans[0] 
+    
+
+NC = input("")
+
+for n in range(int(NC)):
+    Prohibited = input("")
+    result = prog(Prohibited)
+    print(f'case {n+1}: {result}')
+========================================================
+Definimos a função prog, não necessário, para rodar o progrma, line 3. criamos a lista "mans" para armazenar os saldados, line 4. logo após
