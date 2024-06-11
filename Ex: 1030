@@ -23,12 +23,15 @@ def prog(Prohibited):
         
     return mans[0] 
     
-
+r = []
 NC = input("")
 
 for n in range(int(NC)):
     Prohibited = input("")
-    result = prog(Prohibited)
-    print(f'case {n+1}: {result}')
+    r.append(prog(Prohibited))
+    
+j=0    
+for j in range(len(r)):
+    print(f'Case {j+1}: {r[j]}')
 ========================================================
 Definimos a função prog, não necessário, para rodar o progrma, line 3. criamos a lista "mans" para armazenar os saldados, line 4. logo após
