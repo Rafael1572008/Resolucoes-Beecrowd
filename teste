@@ -1,0 +1,46 @@
+regiões = []
+resultados = []
+def Energia(r, p):
+    regiões = []
+    
+    for i in range(2, int(r) + 1):
+        regiões.append(i)
+    print(regiões)
+        
+    i = 0
+    while (len(regiões) != 1):
+        print(i)
+        i = (i + p - 1) % len(regiões)
+        print(i)
+        
+        del regiões[i]
+        print(regiões)
+        
+    return regiões[0]  
+    
+
+while regiões != '0':
+    
+    regiões.eppend(input())
+
+
+for i in range(2, 17):
+    print(i)
+    r = Energia(regiões, i)
+    
+    if r == 13:
+        break
+    
+    
+for i in range(len(regiões))
+    while r != 13:
+        r = Energia(regiões[i], j)
+        
+        j += 1 
+        
+    resultados.append(r)
+    
+print(i)
+
+
+
