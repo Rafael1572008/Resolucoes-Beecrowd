@@ -1,46 +1,44 @@
-regiões = []
-resultados = []
 def Energia(r, p):
-    regiões = []
+    regioes = []
     
-    for i in range(2, int(r) + 1):
-        regiões.append(i)
-    print(regiões)
-        
-    i = 0
-    while (len(regiões) != 1):
-        print(i)
-        i = (i + p - 1) % len(regiões)
-        print(i)
-        
-        del regiões[i]
-        print(regiões)
-        
-    return regiões[0]  
+    for i in range(1, r + 1):
+        regioes.append(i)
+    print(regioes) 
     
-
-while regiões != '0':
+    i = 0    
     
-    regiões.eppend(input())
+    
+    while (len(regioes) != 1):
+        i = (i + p - 1) % len(regioes)
+        
+        print(regioes)
+        print(regioes[i])
+        del regioes[i]
+        
+    print(f'ola {regioes[0]}')   
+    return regioes[0]
 
 
-for i in range(2, 17):
-    print(i)
-    r = Energia(regiões, i)
-    
-    if r == 13:
+
+linhas = []
+regioes = []
+
+while True:
+    entrada = input("Digite um número ou 0 para parar: ")
+    if entrada == '0':
         break
-    
-    
-for i in range(len(regiões))
-    while r != 13:
-        r = Energia(regiões[i], j)
+    linhas.append(entrada)
+print(linhas) 
+
+for j in range(len(linhas)):
+    for i in range(2, int(linhas[j]) + 2):
         
-        j += 1 
+        print(linhas[j], j, i)
+        r = Energia(int(linhas[j]), i)
         
-    resultados.append(r)
-    
-print(i)
-
-
-
+        if r == 13:
+            regioes.append(r)
+            break
+        
+for i in range(len(regioes)):
+    print(regioes[i])
