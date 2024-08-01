@@ -1,0 +1,43 @@
+lst = []
+s = []
+mans = [i for i in range(1, 12 + 1)]
+
+while True:
+    n = int(input("Digite um número (ou 0 para parar): "))
+    if n == 0:
+        break
+    lst.append(n)
+
+for numero in lst:
+    if numero < 2:
+        continue
+    eh_primo = True
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            eh_primo = False
+            break
+    if eh_primo:
+        s.append(numero)
+        
+if not s:
+    print("Nenhum número primo foi encontrado.")
+else:
+    i = 0
+    while len(mans) > 1:
+        i = (i + s[i % len(s)] - 1) % len(mans)
+        del mans[i]
+
+    print(f"O número restante é: {mans[0]}")'''
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]  
+s = list()
+for numero in lst:
+    if numero < 2:
+        continue
+    eh_primo = True
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            eh_primo = False
+            break
+    if eh_primo:
+        s.append(numero)    
+print(s)        
