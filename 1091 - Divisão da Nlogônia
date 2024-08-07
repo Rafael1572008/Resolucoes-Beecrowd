@@ -1,0 +1,24 @@
+def res(c, v):
+    c = [int(x) for x in c]
+    v = [int(y) for y in v]
+    
+    if c[1] > v[1] and c[0] > v[0]: return "SO"    
+    elif c[1] > v[1] and c[0] < v[0]: return "SE"
+    elif c[1] < v[1] and c[0] > v[0]: return "NO"
+    elif c[1] < v[1] and c[0] < v[0]: return "NE"
+    else: return "divisa"
+
+s = []
+
+while True:
+    k = int(input())
+    if k == 0:
+        break
+
+    c = list(map(int, input().split()))
+
+    for i in range(k):
+        v = list(map(int, input().split()))
+        s.append(res(c, v))
+for i in s:
+    print(i)
