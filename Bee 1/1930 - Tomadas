@@ -1,0 +1,5 @@
+n = input().split()
+
+n.sort()
+
+print(int(n[3]) - 3 + int(n[0]) + int(n[1]) + int(n[2]))
