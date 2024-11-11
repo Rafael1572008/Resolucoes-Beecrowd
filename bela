@@ -1,0 +1,30 @@
+lst =[]
+n = int(input())
+cont = 0
+lstf = []
+
+letra = { 1 : "A", 2 : "B", 3 : "C", 4 : "D", 5 : "E"}
+
+for i in range(n):
+    e = input().split()
+    lst.append(e)
+
+for i in lst:
+    q = []
+    cont = 0
+    for j in range(5):
+        print(i[j])
+        if int(i[j]) >= 127:
+            r = False
+            q.append(False)
+        else:
+            q.append(True)
+            cont += 1
+            p = j      
+
+    if cont != 1:
+        lstf.append('*')
+    else:
+        lstf.append(letra[p + 1])
+
+print(lstf)            
