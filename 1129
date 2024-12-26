@@ -1,0 +1,23 @@
+dick = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E"}
+e = []
+
+def calc(lst):
+    r = ''
+    for i in lst:
+        if i <= 127:
+            if r == '':
+                r = dick[int(lst.index(i))]
+            else:
+                return '*'
+    return r        
+
+n = int(input())
+
+while n != 0:
+    for i in range(n):
+        e.append(list(map(int, input().split())))
+
+    for i in e:
+        print(f"{calc(i)}")
+        
+    n = int(input())
