@@ -1,0 +1,20 @@
+r = []
+
+while True:
+    a, b = map(int, input().split())
+    
+    if a == 0 and b == 0:
+        break
+    
+    Ca = map(int, input().split())
+    Cb = map(int, input().split())
+    
+    Ca, Cb = set(Ca), set(Cb)
+    
+    Sa = Ca - Cb
+    Sb = Cb - Ca
+    
+    r.append(min(len(Sa), len(Sb)))
+
+for i in r:
+    print(i)
